@@ -28,8 +28,5 @@ public class ClienteEntity {
 
     @NotBlank
     @Column(length = 100)
-    private String senha;
-
-    @Column(name = "session_id", length = 255)
-    private String sessionId;
+    private String senhaCliente;
 }

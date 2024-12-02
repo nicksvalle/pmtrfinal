@@ -1,4 +1,4 @@
-package br.com.william.nicolas.pmtrfinal.modules.produto;
+package br.com.william.nicolas.pmtrfinal.modules.produto.entity;
 
 import java.math.BigDecimal;
 
@@ -35,6 +35,7 @@ public class ProdutoEntity {
     @Column(name = "nome_produto", length = 255)
     private String nomeProduto;
 
+    @NotNull
     @Column(columnDefinition = "TEXT")
     private String descricao;
 
@@ -43,6 +44,7 @@ public class ProdutoEntity {
     private BigDecimal preco;
 
     @NotNull
+    @Column(name = "estoque")
     private Integer estoque;
 
     @Column(name = "codigo_barras", length = 255)
@@ -51,6 +53,7 @@ public class ProdutoEntity {
     @Column(name = "qr_code", length = 255)
     private String qrCode;
 
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "id_categoria", nullable = false)
     private CategoriaEntity categoria;

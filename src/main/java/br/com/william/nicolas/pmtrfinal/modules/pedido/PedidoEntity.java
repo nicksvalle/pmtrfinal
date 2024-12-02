@@ -21,6 +21,7 @@ public class PedidoEntity {
     @Column(name = "id_pedido")
     private Long idPedido;
 
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "id_cliente", nullable = false)
     private ClienteEntity cliente;
